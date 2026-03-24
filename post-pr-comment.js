@@ -3,7 +3,7 @@ import toMarkdown from "./utils/to-markdown.js";
 
 export default async function postPRComment(reviewResult) {
     const token = process.env.GITHUB_TOKEN;
-    const repo = process.GITHUB_REPOSITORY;
+    const repo = process.env.GITHUB_REPOSITORY;
     const prNumber = Number(process.env.PR_NUMBER);
 
     if (!token || !repo || !prNumber) {
